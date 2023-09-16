@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Circle-22 || Calculator Project</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Circle-22 Calculator Project</h1>
+      <form>
+        <div class="input-box">
+          <input type="text" name="display" class="display" />
+        </div>
+        <div class="box">
+          <input type="button" value="AC" />
+          <input type="button" value="DE" />
+          <input type="button" value="." />
+          <input type="button" value="/" class="operator" />
+        </div>
+        <div class="box">
+          <input type="button" value="7" />
+          <input type="button" value="8" />
+          <input type="button" value="9" />
+          <input type="button" value="*" class="operator" />
+        </div>
+        <div class="box">
+          <input type="button" value="4" class="box-3" />
+          <input type="button" value="5" class="box-3" />
+          <input type="button" value="6" class="box-3" />
+          <input type="button" value="-" class="box-3 operator" />
+        </div>
+        <div class="box">
+          <input type="button" value="1" class="box-4" />
+          <input type="button" value="2" class="box-4" />
+          <input type="button" value="3" class="box-4" />
+          <input type="button" value="+" class="box-4 operator" />
+        </div>
+        <div class="box box__last">
+          <input type="button" value="00" class="box-0" />
+          <input type="button" value="0" class="box-0" />
+          <input type="button" value="%" id="percentage" class="operator" />
+          <input type="button" value="=" id="equal" class="operator" />
+        </div>
+      </form>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
