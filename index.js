@@ -1,4 +1,5 @@
 const fourthBox = document.querySelectorAll(".box-4");
+const secondBox = document.querySelectorAll(".box-2");
 const firstBox = document.querySelectorAll(".box-1");
 const zeroBtn = document.querySelectorAll(".box-0");
 const thirdBox = document.querySelectorAll(".box-3");
@@ -7,7 +8,6 @@ const equalBtn = document.querySelector("#equal");
 const acBtn = document.querySelector("#ac");
 const deBtn = document.querySelector("#de");
 const percentageBtn = document.querySelector("#percentage");
-// console.log({ acBtn, deBtn });
 
 for (let box of thirdBox) {
   box.addEventListener("click", () => {
@@ -15,6 +15,11 @@ for (let box of thirdBox) {
   });
 }
 fourthBox.forEach((box) => {
+  box.addEventListener("click", () => {
+    display.value += box.value;
+  });
+});
+secondBox.forEach((box) => {
   box.addEventListener("click", () => {
     display.value += box.value;
   });
