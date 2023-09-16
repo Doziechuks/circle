@@ -1,10 +1,13 @@
 const fourthBox = document.querySelectorAll(".box-4");
+const firstBox = document.querySelectorAll(".box-1");
 const zeroBtn = document.querySelectorAll(".box-0");
 const thirdBox = document.querySelectorAll(".box-3");
 const display = document.querySelector(".display");
 const equalBtn = document.querySelector("#equal");
+const acBtn = document.querySelector("#ac");
+const deBtn = document.querySelector("#de");
 const percentageBtn = document.querySelector("#percentage");
-// console.log({ equalBtn });
+// console.log({ acBtn, deBtn });
 
 for (let box of thirdBox) {
   box.addEventListener("click", () => {
@@ -16,13 +19,29 @@ fourthBox.forEach((box) => {
     display.value += box.value;
   });
 });
+firstBox.forEach((box) => {
+  box.addEventListener("click", () => {
+    display.value += box.value;
+  });
+});
 
 zeroBtn.forEach((box) => {
   box.addEventListener("click", () => {
     display.value += box.value;
   });
 });
-
+acBtn.addEventListener("click", () => {
+  if (display.value.trim() === "") {
+    return;
+  }
+  display.value = "";
+});
+deBtn.addEventListener("click", () => {
+  if (display.value.trim() === "") {
+    return;
+  }
+  display.value = display.value.toString().slice(0, -1);
+});
 equalBtn.addEventListener("click", () => {
   if (display.value.trim() === "") {
     return;
